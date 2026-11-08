@@ -1,0 +1,9 @@
+@test
+fn greetsNamedReader(): void {
+  expect.equal(greeting("Мара"), "Добро пожаловать, Мара!");
+}
+
+@test
+fn emptyNameKeepsCurrentFormatting(): void {
+  expect.equal(greeting(""), "Добро пожаловать, !");
+}

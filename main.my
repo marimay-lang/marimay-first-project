@@ -1,0 +1,15 @@
+import { Error as IoError, println } from "std/io";
+
+fn greeting(name: string): string {
+  return $"Добро пожаловать, {name}!";
+}
+
+fn main(): Result<void, IoError> {
+  let count: f64 = 2.0;
+  const snapshot = count;
+  count += 1.0;
+  println(greeting("Мара"))?;
+
+  println($"count: {count}, snapshot: {snapshot}")?;
+  return Ok();
+}
